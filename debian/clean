@@ -1,0 +1,16 @@
+ABOUT-NLS
+config.rpath
+debian/ucarp.8
+m4/host-cpu-c-abi.m4
+po/*.gmo
+po/Makevars
+po/Rules-quot
+po/boldquot.sed
+po/en@boldquot.header
+po/en@boldquot.po
+po/en@quot.header
+po/en@quot.po
+po/insert-header.sin
+po/quot.sed
+po/remove-potcdate.sin
+po/stamp-po

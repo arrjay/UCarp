@@ -1,0 +1,3 @@
+extend-diff-ignore = "^m4/(gettext|iconv|intlmacosx|lib-ld|lib-link|lib-prefix|nls|po|progtest)\.m4$"
+extend-diff-ignore = "^po/Makefile.in.in$"
+extend-diff-ignore = "^m4/Makefile.am$"

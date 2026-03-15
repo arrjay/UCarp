@@ -1,0 +1,2 @@
+debian/vip-down usr/share/ucarp/
+debian/vip-up   usr/share/ucarp/
