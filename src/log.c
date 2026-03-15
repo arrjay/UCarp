@@ -69,10 +69,10 @@ void logfile(const int crit, const char *format, ...)
         switch (crit) {
         case LOG_WARNING:
         case LOG_ERR:
-            fprintf(stderr, "%s.%06ld: %s%s\n", timestr, tv.tv_usec, urgency, line);
+            fprintf(stderr, "%s.%06lld: %s%s\n", timestr, (long long)tv.tv_usec, urgency, line);
             break;
         default:
-            printf("%s.%06ld: %s%s\n", timestr, tv.tv_usec, urgency, line);
+            printf("%s.%06lld: %s%s\n", timestr, (long long)tv.tv_usec, urgency, line);
         }
     }
     va_end(va);
