@@ -1,0 +1,35 @@
+name: Build Trixie armhf Package
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Docker
+        uses: docker/setup-docker-action@v4
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker BuildX
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Package
+        run: bash ./.github/packaging/build-pkg
+
+      - name: Bundle Release Artifact
+        run: bash -c 'shopt -s globstar && mkdir output && mv build/**/*.deb output && cd output && zip packages.zip *.deb'
+
+      - name: Attach Packages to Release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ./output/packages.zip
+          asset_name: ${{ github.event.repository.name }}-debian-trixie.zip
+          tag: ${{ github.ref }}

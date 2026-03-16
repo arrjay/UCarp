@@ -1,3 +1,9 @@
+ucarp (1.5.2+git20260315.52e4b13-1) unstable; urgency=medium
+
+  * New upstream version 1.5.2+git20260315.52e4b13. (Closes: #1120293)
+
+ -- RJ Bergeron <rj@bbxn.us>  Sun, 15 Mar 2026 10:45:00 -0400
+
 ucarp (1.5.2+git20192404.1a9aaf7-1) unstable; urgency=medium
 
   * New upstream version 1.5.2+git20192404.1a9aaf7. (Closes: #1017647)
