@@ -3,7 +3,6 @@ config.rpath
 debian/ucarp.8
 m4/host-cpu-c-abi.m4
 po/*.gmo
-po/Makevars
 po/Rules-quot
 po/boldquot.sed
 po/en@boldquot.header

@@ -8,7 +8,6 @@ export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 execute_before_dh_autoreconf:
 	touch ABOUT-NLS
 	touch config.rpath
-	cp po/Makevars.template po/Makevars
 
 execute_after_dh_autoreconf:
 	setsid gettextize --force --copy --no-changelog
